@@ -2,4 +2,5 @@
 Building templates and reconstructing parameters for Core Collapse SNe
 
 
-[WORK IN PROGRESS]
+[THIS GITHUB PAGE IS STILL WORK IN PROGRESS]
+
