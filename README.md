@@ -6,7 +6,14 @@ Building templates and reconstructing parameters for Core Collapse SNe.
 
 You will need: 
 - Python3 and all the basics packages such as numpy, scipy, ...
-- The package **george** (https://george.readthedocs.io/en/latest/) 
+- The package **george** (https://george.readthedocs.io/en/latest/)
+
+  ## Reference
+
+  In this directoy you will find two .xlcs files:
+  - SN_names.xlcs containes a column with the names of the SN contained in the training set.
+  - bandpass.xlcs containes the needed information for basics filters, such as effective wavelength, fwhm and transformation from Jhonson to AB system.
+    
 
 ## Data
 
