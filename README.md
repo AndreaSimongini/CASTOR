@@ -44,10 +44,12 @@ You should create in the same directory a *Application/SN_name* (where SN_name i
 - The file must be in .dat format
 - The name of the file must be the SN_name (i.e. SN2015ap.dat)
 - The first four columns of the file must be time (in MJD), magnitude, error and filter
-- The filter must follow the same nomenclature as in the bandpass.xlcs file. - You have to set the new_name variable to the name of your new supernova.
+- The filter must follow the same nomenclature as in the bandpass.xlcs file.
+- You have to set the new_name variable to the name of your new supernova.
 
-  **Step 2**: Building templates  
+**Step 2**: Building templates  
 
+If you'd set correctly every variable you'll only need to 
 
 
 
