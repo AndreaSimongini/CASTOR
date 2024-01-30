@@ -8,25 +8,27 @@ You will need:
 - Python3 and all the basics packages such as numpy, scipy, ...
 - The package **george** (https://george.readthedocs.io/en/latest/)
 
-## Reference
+A brief introduction to every directory here:
+
+1. **Reference**
 
 In this directoy you will find two .xlcs files:
 - SN_names.xlcs containes a column with the names of the SN contained in the training set.
 - bandpass.xlcs containes the needed information for basics filters, such as effective wavelength, fwhm and transformation from Jhonson to AB system.
   
 
-## Data
+2. **Data**
 
 Every photometric and spectrometric data for each supernova in the training set is taken from Open Supernova Catalog https://github.com/astrocatalogs/supernovae and WISeREP https://www.wiserep.org/ respectively. You will find the data for every SN out of the training set in the /Data/ directory. 
 
-### data_lightcurves
+ - data_lightcurves
 
 Every light curve point is contained in a file.dat that **must** follow this rules in order to be read by CASTOR with no problems: 
 - The file.dat is named after the SN (i.e. SN2014G.dat)
 - The first four columns must be Time (in MJD), magnitude, error of the magnitude and filter.
 - The file must be in the right directory which is Localpath/Data/data_lightcurves/
 
-### data_spectra 
+- data_spectra 
 
 Every spectral point is contained in a file.dat that **must** follow this rules in order to be read by CASTOR with no problems: 
 - The file.dat is named after the SN + the epoch (in MJD) at which was observed (i.e. ASASSN14jb_56957.39907407408.dat).
