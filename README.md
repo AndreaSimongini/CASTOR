@@ -45,7 +45,8 @@ Here you will find the results of the application on SN2015ap, in its dedicated 
 
 ## How to use CASTOR step by step: 
 
-**STEP 0**: clone this github repository. The enviromental variable LOCALPATH should automatically set the right directory. The *Data* and *Reference* folders must be downloaded and placed in the same directory as the CASTOR code. 
+**STEP 0**: clone this github repository. The enviromental variable LOCALPATH should automatically set the right directory. Be aware that the *Data*, *Reference* amd *Application* folders must be in the same path as the CASTOR.ipynb file to be correctly found. 
+  
 
 **Step 1**: prepare your own Supernova. 
 
@@ -63,14 +64,14 @@ If you followed every step correctly so far, the software will now operate auton
 - Section 1: preliminary studies. If the training set has not changed, leave the "execute" binary variable to False setting.
 - Section 2: comparison between YOUR SN and the training set. You must have followed **Step 1** info.
 - Section 3: creation of spectral templates. This is auto, but you can choose either to execute it or not.
-- Section 4: parameter estimation. This is partially automatic, but you can choos either to execute it or not.
+- Section 4: parameter estimation. This is partially automatic, but you can choose either to execute it or not.
 
 **Step 3**: velocity fitting 
 
 The entire software is *almost* completely authomatic, except for the velocity fitting routine, which requires the hands and the eyese of an active user. 
 Here the instructions to follow in order to correctly estimate velocity, redshift and so distance and spectral class. First the list of the questions you'll be asked, then the list of the answers and **how** you are supposed to answer in order to continue. 
 
-1. First, a spectrum is shown to you. You have to decide whether you see or not see both a P-Cygni profile and an Absorption line. If you don't see any, the second spectrum will be shown, and so on. 
+1. First, a spectrum is shown to you. You have to decide whether you see or not both a P-Cygni profile and an Absorption line. If you don't see any, the second spectrum will be shown, and so on. 
 2. Then, the selected spectrum is shown with lines above it. You have to decide which lines (one for P-Cygni and one for absorption) you want to study.
 3. Then, you have to define the interval containing first the P-Cygni and then the absorption.
 4. Finally, the code will automatically analyze every spectra on the basis of your choices. 
