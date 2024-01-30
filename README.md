@@ -40,6 +40,9 @@ Every spectral point is contained in a file.dat that **must** follow these rules
 
 Here you will find the results of the application on SN2015ap, in its dedicated folder. 
 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## How to use CASTOR step by step: 
 
 **STEP 0**: clone this github repository. The enviromental variable LOCALPATH should automatically set the right directory. The *Data* and *Reference* folders must be downloaded and placed in the same directory as the CASTOR code. 
