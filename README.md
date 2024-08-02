@@ -14,7 +14,7 @@ There are some general physical assumptions we made to estimate the parameters:
 - Mass conservation
 - Canonical partition of energy between photons and neutrinos
 - Modified-black-body emission
-- 
+
 --WORK IN PROGRESS-- 
 ## Ingredients 
 
