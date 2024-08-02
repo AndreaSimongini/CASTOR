@@ -2,7 +2,6 @@
 
 Welcome to the CASTOR repository!
 
-Right now the page is under maintainment as we are working on the updates of our submitted paper. 
-When we'll re-submit the paper I will update this page 
+## Introduction 
 
-See you soon :) 
+CASTOR is an open access software that takes as input light curves (and spectra) of a core collapse supernova and estimates the parameters of the event, of the photosphere and of the progenitor star. 
