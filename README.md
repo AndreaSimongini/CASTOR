@@ -18,6 +18,14 @@ There are some general physical assumptions we made to estimate the parameters:
 --WORK IN PROGRESS-- 
 ## Ingredients 
 
+In order to correctly use CASTOR you will need a few ingredients. Here, in this repository, you will find the entire training set dataset. This contains: 
+- A Training_Set.xlsx file with a list of names, types, redshift and other ancillary information.
+- A data_lightcurves folder containing every lightcurve of each supernova in the training set
+- A data_spectra folder containing every spectra of each supernova in the training set
+
+The light curve files are all of the form \textbf{name.dat} containing three columns: time (in MJD), apparent magnitude and error. 
+The spectra files are all of the form \textbf{epochMJD.dat} containing three columns: wavelength (in \AA), flux (in erg/s/cm$^2$/\AA) and error. 
+
 ## Instructions 
 
 ## Debugging 
