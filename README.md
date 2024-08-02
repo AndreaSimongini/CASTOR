@@ -14,6 +14,11 @@ There are some general physical assumptions we made to estimate the parameters:
 - Mass conservation
 - Canonical partition of energy between photons and neutrinos
 - Modified-black-body emission
+The list of filter allowed in CASTOR is: 
+- Bessell system (U, B, V, R, I)
+- SDSS and modified SDSS systems (u, g, r, i, z and u', g', r', i', z')
+- Johnson-Glass system (Y, J, H, K, Ks)
+- SWIFT/UVOT system (w1, w2, m2)
 
 ## Ingredients 
 
@@ -22,9 +27,10 @@ In order to correctly use CASTOR you will need a few ingredients. Here, in this 
 - A data_lightcurves folder containing every lightcurve of each supernova in the training set
 - A data_spectra folder containing every spectra of each supernova in the training set
 
-The light curve files are all of the form **name.dat** containing three columns: time (in MJD), apparent magnitude and error. 
-The spectra files are all of the form **epochMJD.dat** containing three columns: wavelength (in \AA), flux (in erg/s/cm$^2$/\AA) and error. 
+The light curve files are all of the form **name.dat** containing four columns: time (in MJD), apparent magnitude, error and filter. 
+The spectra files are all of the form **epochMJD.dat** containing three columns: wavelength (in A), flux (in erg/s/cm2/A) and error. 
 
+What **you** will need to add to these date is a **name.dat** file (i.e. *SN2015ap.dat*) containing all your data with correct units and following the column scheme of time, magnitude, error and filter. 
 
 --WORK IN PROGRESS-- 
 ## Instructions 
