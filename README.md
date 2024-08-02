@@ -10,13 +10,23 @@ CASTOR is an open access software that takes as input light curves (and spectra)
 3. Using the light curves of the case-of-study supernova and the spectra of the reference supernova, we create synthetic spectra.
 4. Using the synthetic light curves and spectra of the case-of-study supernova we estimate parameters.
 There are some general physical assumptions we made to estimate the parameters:
-I. Spherical symmetry
-II. Mass conservation
-III. Canonical partition of energy between photons and neutrinos
-IV. Modified-black-body emission
-
-
-
-
-
+- Spherical symmetry
+- Mass conservation
+- Canonical partition of energy between photons and neutrinos
+- Modified-black-body emission
+- 
 --WORK IN PROGRESS-- 
+## Ingredients 
+
+## Instructions 
+
+## Debugging 
+
+## Aknowledgments
+
+
+
+
+
+
+
