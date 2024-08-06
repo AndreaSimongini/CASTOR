@@ -31,8 +31,8 @@ Every light curve file is in the form `name.dat` (i.e. SN2015ap.dat) and contain
 - filter: in the common nomenclature (i.e. B, u, K, w1)
 
 Every spectrum file is in the form `name_MJD.dat` (i.e. SN2015ap_57273.8433.dat) and contains data points divided in two columns: 
-- wavelength: in $ \AA $ units
-- flux: in erg/s/cm $^2$ / $&#197$ units 
+- wavelength: in Å units
+- flux: in erg/s/$cm^2$/Å units 
 
 
 
