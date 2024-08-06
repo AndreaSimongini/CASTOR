@@ -50,27 +50,24 @@ Light curves data of the case-of-study supernova must follow the same scheme, ot
 
 ### 2.1 - User input
 
-
-
-`calibration.py`
-
-
-
-
-
-Once every directory is ready for usage, you will simply need to execute the **castor_source.py** file available in this repository. We prepared also a **castor_usage.ipynb** notebook to help. The information that need to be given as input by the user are: 
+The information that need to be given as input by the user are: 
 - name of the supernova (be sure that the name is exactly the same as defined in the name.dat file)
 - path of the training set data
 - path of the name.dat file
 - path to the output directory
 
-Once every input has been defined, you can execute the notebook and CASTOR will automatically produce the spectral templates and estimate the parameters. If you are using the **castor_source.py** you will be asked to set some important information regarding the P-Cygni profile fitting process that will need a user selection choice. 
+### 2.2 - Output 
 
 CASTOR will automatically generate the following outputs: 
 - a comparison.png image containing the comparison of the case-of-study and the reference supernovae light curves
 - a templates.png image which shows the synthetic spectra reconstruction
+- a spectrum_MJD.dat file for each of the synthetic spectra 
 - a velocity.png image which shows the evolution of expansion velocity
 - a parameters.txt text file with all the parameters with their relative uncertainty. 
+
+### 2.3 Profile fitting
+
+--WORK IN PROGRESS--
 
 ## Debugging 
 
@@ -86,6 +83,9 @@ If the spectral templates look fine, you should check the velocity.png image: th
 
 ## Aknowledgments
 
+Please if you used CASTOR for your analysis or your scientific results cite the following paper: 
+--Inserire paper quando sarà pubblicato-- 
+And link this github page in the footnotes 
 
 
 
