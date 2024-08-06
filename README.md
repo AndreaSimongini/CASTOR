@@ -21,9 +21,18 @@ The list of filter allowed in CASTOR is:
 ## 1 - Data
 
 All data needed for the analysis are available in the `Training_Set`. Data are divided into:
-- data_spectra: containing spectral data of each supernova
-- data_lightcurves: containing photometric data of each supernova
+- `data_spectra`: containing spectral data of each supernova
+- `data_lightcurves`: containing photometric data of each supernova
 
+Every light curve file is in the form `name.dat` (i.e. SN2015ap.dat) and contains data points divided in four columns: 
+- time: in MJD units
+- magnitude: in the AB system
+- error: in the AB system
+- filter: in the common nomenclature (i.e. B, u, K, w1)
+
+Every spectrum file is in the form `name_MJD.dat` (i.e. SN2015ap_57273.8433.dat) and contains data points divided in two columns: 
+- wavelength: in $\AA$ units
+- flux: in erg/s/cm$^2$/\AA units 
 
 
 
