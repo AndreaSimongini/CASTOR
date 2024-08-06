@@ -18,10 +18,14 @@ The list of filter allowed in CASTOR is:
 - Johnson-Glass system (Y, J, H, K, Ks)
 - SWIFT/UVOT system (w1, w2, m2)
 
+## 1 - Data
 
-`castor_source.py`
-`calibration.py`
-`execute_castor.ipynb`
+All data needed for the analysis are available in the `Training_Set`. Data are divided into:
+- data_spectra: containing spectral data of each supernova
+- data_lightcurves: containing photometric data of each supernova
+
+
+
 
 
 
@@ -43,6 +47,13 @@ What **you** will need to add to these data is a **name.dat** file (i.e. *SN2015
 - magnitude: has to be in AB system
 - error: has to be in AB system
 - filter: has to follow the previous nomenclature (i.e. B, u, K, w1)
+
+
+
+`castor_source.py`
+`calibration.py`
+`execute_castor.ipynb`
+
 
 ## Instructions 
 
