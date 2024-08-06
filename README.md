@@ -32,39 +32,31 @@ Every light curve file is in the form `name.dat` (i.e. SN2015ap.dat) and contain
 
 Every spectrum file is in the form `name_MJD.dat` (i.e. SN2015ap_57273.8433.dat) and contains data points divided in two columns: 
 - wavelength: in Å units
-- flux: in erg/s/ $cm^2$ /Å units 
+- flux: in erg/s/cm2/Å units
+
+Every information regarding the training set supernovae is contained in the `Training_Set.xlsx` file, which needs to be in the same directory as the data files. 
+
+## 2 - Scripts 
+
+The scripts needed for this analysis are all deposited in the `Scripts` directory you find in this repository. This contains: 
+- the `castor_source.py` file containing the entire source code of CASTOR for the user-dependent analysis
+- the `execute_castor.ipynb` notebook containing the commands and the input needed for the analysis
+- the `calibration.py` file showing how the calibration of the training set is performed
+- the `auto_castor_source.ipynb` file containing the entire source code of CASTOR for the user-independent analysis 
+
+## 3 - User-dependent analysis  
+
+Light curves data of the case-of-study supernova must follow the same scheme, otherwise problems may occurr. 
+
+### 2.1 - User input
 
 
 
-
-
-
-
-
-## Ingredients 
-
-In order to correctly use CASTOR you will need a few ingredients. Here, in this repository, you will find the entire training set dataset. This contains: 
-- A Training_Set.xlsx file with a list of names, types, redshift and other ancillary information.
-- A data_lightcurves folder containing every lightcurve of each supernova in the training set
-- A data_spectra folder containing every spectra of each supernova in the training set
-
-The light curve files are all of the form **name.dat** containing four columns: time (in MJD), apparent magnitude, error and filter. 
-The spectra files are all of the form **epochMJD.dat** containing three columns: wavelength (in A), flux (in erg/s/cm2/A) and error. 
-
-What **you** will need to add to these data is a **name.dat** file (i.e. *SN2015ap.dat*) containing all your photometric points with correct units and following the column scheme of time, magnitude, error and filter. Note that:
-- time: has to be in MJD units
-- magnitude: has to be in AB system
-- error: has to be in AB system
-- filter: has to follow the previous nomenclature (i.e. B, u, K, w1)
-
-
-
-`castor_source.py`
 `calibration.py`
-`execute_castor.ipynb`
 
 
-## Instructions 
+
+
 
 Once every directory is ready for usage, you will simply need to execute the **castor_source.py** file available in this repository. We prepared also a **castor_usage.ipynb** notebook to help. The information that need to be given as input by the user are: 
 - name of the supernova (be sure that the name is exactly the same as defined in the name.dat file)
