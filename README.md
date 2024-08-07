@@ -88,11 +88,14 @@ These are the Q/A you will need to answer:
 
 ## Debugging 
 
-There are a few ways to see if your analysis went fine or there are some problems. The first thing to check is the templates.png file: if the synthetic spectra are looking bad, there is probably a problem in the name.dat file that can be of the form: 
-- incorrect normalization of time
-- incorrect definition of magnitudes
-- incorrect definition of filters
-- bad sampling
+As always, things can go pretty wrong and you will need to re-do your analysis. During the development and testing of CASTOR I faced several problems and learnt how to solve them. Here a few suggestions regarding the most common problems I met. 
+
+1. The first thing you need to check is the `templates.png` file: are the spectra looking reasonable? If not, there can be some problems in your input data:
+     - incorrect normalization of time (are your you saved time in MJD format?)
+     - incorrect definition of magnitudes (here we use apparent magnitudes in AB system)
+     - filters (check if your filters are in the `filterlist` above)
+2. Another important check is the estimate of the `t0` and the `tmax`. If the sampling of your data is bad, or they are collected far from the explosion, the estimate of `t0` may be wrong, thus you need to set it manually. The same problem can occur with the `tmax`: if your data are collected far from the maximum, then it is impossible to determine it with CASTOR. Watch out! If your supernova has to peaks, it can happen that CASTOR identifies the second one (brighter) as `tmax`. Note that many problems you may encounter are simply related to a bad estimation of these two parameters which depend strongly on how the light curves are taken.
+3. 
 
 If the spectral templates look fine, you should check the velocity.png image: the velocity should have a rather normal behaviour: if you see something weird it's probably due to a bad selection of P-Cygni lines to study. An important check is also the distance: since many parameters directly depend on the estimation of distance, if their results look odd, it's probably due to an incorrect estimation of the distance parameter. 
 
