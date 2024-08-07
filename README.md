@@ -104,9 +104,11 @@ As always, things can go pretty wrong and you will need to re-do your analysis. 
 
 ## Aknowledgments
 
-Please if you used CASTOR for your analysis or your scientific results cite the following paper: 
---Inserire paper quando sarà pubblicato-- 
-And link this github page in the footnotes 
+To acknowledge CASTOR in a publication, please cite Simongini et al. 2024 (not yet published) and link this github page. 
+Thank you!
+
+
+
 
 
 
