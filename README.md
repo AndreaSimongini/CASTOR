@@ -46,7 +46,15 @@ The scripts needed for this analysis are all deposited in the `Scripts` director
 
 ## 3 - User-dependent analysis  
 
-Light curves data of the case-of-study supernova must follow the same scheme, otherwise problems may occurr. 
+### 2.0 - Your data 
+
+CASTOR can be employed in two ways: 
+- Analysis of a supernova for which only photometry is available (Simongini et al. 2024)
+- Analysis of a supernova for which photometry and spectroscopy are available (LST Collaboration 2024, in prep)
+
+In the first case, you will only need to prepare your `name.dat` file containing the light curves of the case-of-study supernova following the same scheme as the training set data (four columns, time, magnitude, error and filter). 
+
+In the second case, other than the light curve file, you will need to prepare also the `name_MJD.dat` files containing your spectra following the same scheme as the training set data (two columns, wavelegnth and flux). Then, you have to put your data together with those of the training set in a folder called as your supernova. Finally, a little hack is needed in the software: you replace the `final_name` variable with the name of your source, which will be then used as both case-of-study and reference supernovae. 
 
 ### 2.1 - User input
 
@@ -63,11 +71,20 @@ CASTOR will automatically generate the following outputs:
 - a templates.png image which shows the synthetic spectra reconstruction
 - a spectrum_MJD.dat file for each of the synthetic spectra 
 - a velocity.png image which shows the evolution of expansion velocity
-- a parameters.txt text file with all the parameters with their relative uncertainty. 
+- a results.txt text file with all the parameters with their relative uncertainty. 
 
 ### 2.3 Profile fitting
 
---WORK IN PROGRESS--
+For the user-dependent analysis, you will be asked to provide some easy inputs, helping the software with your own eye for the P-Cygni fitting analysis. In order, you will be asked to select the epoch in which to start the analysis. Then, every available line will be plotted in the selected spectrum: you will need to select one P-Cygni and one absorption line (the list of lines can be found in the head of the code). For both lines you will be asked to select the wavelength range in which to fit the profile, adding respectively to the left and to the right. Finally, you will be asked to select the class: red lines are Hydrogen lines and blue lines are Helium lines. 
+
+These are the Q/A you will need to answer: 
+1. Can you see at least one P-Cygni and one emission line? `yes / no`
+2. Select the P-Cygni and the emission lines. The answer should be comma-space separated i.e. `Helium Ia, Hydrogen a`
+3. Please insert values to enlarge or reduce the interval i.e. `10, -35`
+4. If the interval is fine, please type `0, 0`
+5. Which class is this? Choose between II, IIP, IIn, IIb, Ib, Ib/c, Ic.
+
+
 
 ## Debugging 
 
