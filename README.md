@@ -104,7 +104,8 @@ As always, things can go pretty wrong and you will need to re-do your analysis. 
 
 ## Aknowledgments
 
-To acknowledge CASTOR in a publication, please cite Simongini et al. 2024 (not yet published) and link this github page. 
+To acknowledge CASTOR in a publication, please cite [Simongini et al. 2024 | https://doi.org/10.1093/mnras/stae1911].
+
 Thank you!
 
 
