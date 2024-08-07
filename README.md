@@ -1,6 +1,6 @@
 # CASTOR (**Core collApse Supernovae parameTers estimatOR**) 
 
-CASTOR is a full open access software that takes as input the *light curves* of a core collapse supernova and estimates the parameters belonging to the ejecta, to the progenitor star and to the event itself. We define the **case-of-study** supernova as the object we want to analyse, **training set** as the list of published supernovae used as reference and **reference** supernova as the most resembling supernova to our case-of-study out of the training set. To fully recover the parametric map of the case-of-study supernova, we apply the following procedures: 
+CASTOR is a open access software that takes as input the *light curves* of a core collapse supernova and estimates the parameters belonging to the ejecta, to the progenitor star and to the event itself. We define the **case-of-study** supernova as the object we want to analyse, **training set** as the list of published supernovae used as reference and **reference** supernova as the most resembling supernova to our case-of-study out of the training set. To fully recover the parametric map of the case-of-study supernova, we apply the following procedures: 
 1. We compare the light curves of the case-of-study supernova with the light curves of every SN from the training set.
 2. By applying a chi-squared test, we select the reference supernova.
 3. Using the light curves of the case-of-study supernova and the spectra of the reference supernova, we create synthetic spectra.
@@ -46,7 +46,7 @@ The scripts needed for this analysis are all deposited in the `Scripts` director
 
 ## 3 - User-dependent analysis  
 
-### 2.0 - Your data 
+### 3.1 - Input data 
 
 CASTOR can be employed in two ways: 
 - Analysis of a supernova for which only photometry is available (Simongini et al. 2024)
@@ -56,7 +56,7 @@ In the first case, you will only need to prepare your `name.dat` file containing
 
 In the second case, other than the light curve file, you will need to prepare also the `name_MJD.dat` files containing your spectra following the same scheme as the training set data (two columns, wavelegnth and flux). Then, you have to put your data together with those of the training set in a folder called as your supernova. Finally, a little hack is needed in the software: you replace the `final_name` variable with the name of your source, which will be then used as both case-of-study and reference supernovae. 
 
-### 2.1 - User input
+### 3.2 - Other input
 
 The information that need to be given as input by the user are: 
 - name of the supernova (be sure that the name is exactly the same as defined in the name.dat file)
@@ -64,7 +64,7 @@ The information that need to be given as input by the user are:
 - path of the name.dat file
 - path to the output directory
 
-### 2.2 - Output 
+### 3.3 - Output 
 
 CASTOR will automatically generate the following outputs: 
 - a comparison.png image containing the comparison of the case-of-study and the reference supernovae light curves
@@ -73,7 +73,7 @@ CASTOR will automatically generate the following outputs:
 - a velocity.png image which shows the evolution of expansion velocity
 - a results.txt text file with all the parameters with their relative uncertainty. 
 
-### 2.3 Profile fitting
+### 3.4 Profile fitting
 
 For the user-dependent analysis, you will be asked to provide some easy inputs, helping the software with your own eye for the P-Cygni fitting analysis. In order, you will be asked to select the epoch in which to start the analysis. Then, every available line will be plotted in the selected spectrum: you will need to select one P-Cygni and one absorption line (the list of lines can be found in the head of the code). For both lines you will be asked to select the wavelength range in which to fit the profile, adding respectively to the left and to the right. Finally, you will be asked to select the class: red lines are Hydrogen lines and blue lines are Helium lines. 
 
@@ -85,19 +85,20 @@ These are the Q/A you will need to answer:
 5. Which class is this? Choose between II, IIP, IIn, IIb, Ib, Ib/c, Ic.
 
 
-
-## Debugging 
+## 4. Debugging 
 
 As always, things can go pretty wrong and you will need to re-do your analysis. During the development and testing of CASTOR I faced several problems and learnt how to solve them. Here a few suggestions regarding the most common problems I met. 
 
 1. The first thing you need to check is the `templates.png` file: are the spectra looking reasonable? If not, there can be some problems in your input data:
-     - incorrect normalization of time (are your you saved time in MJD format?)
-     - incorrect definition of magnitudes (here we use apparent magnitudes in AB system)
-     - filters (check if your filters are in the `filterlist` above)
-2. Another important check is the estimate of the `t0` and the `tmax`. If the sampling of your data is bad, or they are collected far from the explosion, the estimate of `t0` may be wrong, thus you need to set it manually. The same problem can occur with the `tmax`: if your data are collected far from the maximum, then it is impossible to determine it with CASTOR. Watch out! If your supernova has to peaks, it can happen that CASTOR identifies the second one (brighter) as `tmax`. Note that many problems you may encounter are simply related to a bad estimation of these two parameters which depend strongly on how the light curves are taken.
-3. 
-
-If the spectral templates look fine, you should check the velocity.png image: the velocity should have a rather normal behaviour: if you see something weird it's probably due to a bad selection of P-Cygni lines to study. An important check is also the distance: since many parameters directly depend on the estimation of distance, if their results look odd, it's probably due to an incorrect estimation of the distance parameter. 
+     - incorrect normalization of time (it the time column in MJD format?)
+     - incorrect definition of magnitudes (is the magnitude column in AB system? Are magnitudes apparent and not absolute?)
+     - filters (are the filters in the allowed `filterlist` above and with the correct nomenclature?)
+2. Another important check is the estimate of the `t0` and the `tmax`. If the sampling of your data is bad, or they are collected far from the explosion, the estimate of `t0` may be wrong, thus you need to set it manually. The same problem can occur with the `tmax`: if your data are collected far from the maximum, then it is impossible to determine it with CASTOR. Another problem may occur if the light curves show two peaks with the second brighter than the first: CASTOR will select the second peak for the estimate of `tmax'. Note that many problems you may encounter are simply related to a bad estimation of these two parameters which depend strongly on how the light curves are taken.
+3. Check the `velocity.png` plot and the `distance` value: are they reasonable and close to what you were expecting? If not, you may need to execute again the `parameter_estimation` routine and select different lines or different values for the range or different epochs. You may need to repeat this step several times for both features (P-Cygni and absorption) until you find the correct one that gives you the correct results. In this case, a fine tuning is necessary until you find the right combination: every other parameter strongly relies on the velocity + distance estimation. 
+4. Check the `gp.png` plot. If the GPs failed in fitting the light curves, there can be several problems in templates building and parameter estimation. This problem may occur if:
+   - the `t0` value is estimated badly.
+   - data points are too scattered in time.
+   - data points are too scattered in magnitude following a non-physical behaviour. 
 
 
 
