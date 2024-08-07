@@ -42,7 +42,7 @@ The scripts needed for this analysis are all deposited in the `Scripts` director
 - the `castor_source.py` file containing the entire source code of CASTOR for the user-dependent analysis
 - the `execute_castor.ipynb` notebook containing the commands and the input needed for the analysis
 - the `calibration.py` file showing how the calibration of the training set is performed
-- the `auto_castor_source.ipynb` file containing the entire source code of CASTOR for the user-independent analysis 
+- (for the future) the `auto_castor_source.ipynb` file containing the entire source code of CASTOR for the user-independent analysis 
 
 ## 3 - User-dependent analysis  
 
