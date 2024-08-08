@@ -95,12 +95,11 @@ As always, things can go pretty wrong and you will need to re-do your analysis. 
      - incorrect definition of magnitudes (is the magnitude column in AB system? Are magnitudes apparent and not absolute?)
      - filters (are the filters in the allowed `filterlist` above and with the correct nomenclature?)
 2. Another important check is the estimate of the `t0` and the `tmax`. If the sampling of your data is bad, or they are collected far from the explosion, the estimate of `t0` may be wrong, thus you need to set it manually. The same problem can occur with the `tmax`: if your data are collected far from the maximum, then it is impossible to determine it with CASTOR. Another problem may occur if the light curves show two peaks with the second brighter than the first: CASTOR will select the second peak for the estimate of `tmax'. Note that many problems you may encounter are simply related to a bad estimation of these two parameters which depend strongly on how the light curves are taken.
-3. Check the `velocity.png` plot and the `distance` value: are they reasonable and close to what you were expecting? If not, you may need to execute again the `parameter_estimation` routine and select different lines or different values for the range or different epochs. You may need to repeat this step several times for both features (P-Cygni and absorption) until you find the correct one that gives you the correct results. In this case, a fine tuning is necessary until you find the right combination: every other parameter strongly relies on the velocity + distance estimation. 
-4. Check the `gp.png` plot. If the GPs failed in fitting the light curves, there can be several problems in templates building and parameter estimation. This problem may occur if:
+3. Check the `velocity.png` plot and the `distance` value: are they reasonable and close to what you were expecting? If not, you may need to execute again the `parameter_estimation` routine and select different lines or different values for the range or different epochs. You may need to repeat this step several times for both features (P-Cygni and absorption) until you find the correct one that gives you the correct results, fine tuning the specifics. 4.
+6. Check the `gp.png` plot. If the GPs failed in fitting the light curves, there can be several problems in templates building and parameter estimation. This problem may occur if:
    - the `t0` value is estimated badly.
    - data points are too scattered in time.
    - data points are too scattered in magnitude following a non-physical behaviour. 
-
 
 
 ## Aknowledgments
