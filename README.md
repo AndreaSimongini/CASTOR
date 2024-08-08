@@ -78,7 +78,7 @@ CASTOR will automatically generate the following outputs:
 
 For the user-dependent analysis, you will be asked to provide some easy inputs, helping the software with your own eye for the P-Cygni fitting analysis. In order, you will be asked to select the epoch in which to start the analysis. Then, every available line will be plotted in the selected spectrum: you will need to select one P-Cygni and one absorption line (the list of lines can be found in the head of the code). For both lines you will be asked to select the wavelength range in which to fit the profile, adding respectively to the left and to the right. Finally, you will be asked to select the class: red lines are Hydrogen lines and blue lines are Helium lines. 
 
-These are the Q/A you will need to answer: 
+These are the questions you will need to answer: 
 1. Can you see at least one P-Cygni and one emission line? `yes / no`
 2. Select the P-Cygni and the emission lines. The answer should be comma-space separated i.e. `Helium Ia, Hydrogen a`
 3. Please insert values to enlarge or reduce the interval i.e. `10, -35`
@@ -91,7 +91,7 @@ These are the Q/A you will need to answer:
 As always, things can go pretty wrong and you will need to re-do your analysis. During the development and testing of CASTOR I faced several problems and learnt how to solve them. Here a few suggestions regarding the most common problems I met. 
 
 1. The first thing you need to check is the `templates.png` file: are the spectra looking reasonable? If not, there can be some problems in your input data:
-     - incorrect normalization of time (it the time column in MJD format?)
+     - incorrect normalization of time (is the time column in MJD format?)
      - incorrect definition of magnitudes (is the magnitude column in AB system? Are magnitudes apparent and not absolute?)
      - filters (are the filters in the allowed `filterlist` above and with the correct nomenclature?)
 2. Another important check is the estimate of the `t0` and the `tmax`. If the sampling of your data is bad, or they are collected far from the explosion, the estimate of `t0` may be wrong, thus you need to set it manually. The same problem can occur with the `tmax`: if your data are collected far from the maximum, then it is impossible to determine it with CASTOR. Another problem may occur if the light curves show two peaks with the second brighter than the first: CASTOR will select the second peak for the estimate of `tmax'. Note that many problems you may encounter are simply related to a bad estimation of these two parameters which depend strongly on how the light curves are taken.
