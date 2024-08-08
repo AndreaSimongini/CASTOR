@@ -11,6 +11,7 @@ There are some general physical assumptions we made to estimate the parameters:
 - Mass conservation
 - Canonical partition of energy between photons and neutrinos
 - Modified-black-body emission
+- Perfect adiabaticity at the time of maximum luminosity
 
 The list of filter allowed in CASTOR is: 
 - Bessell system (U, B, V, R, I)
@@ -49,8 +50,8 @@ The scripts needed for this analysis are all deposited in the `Scripts` director
 ### 3.1 - Input data 
 
 CASTOR can be employed in two ways: 
-- Analysis of a supernova for which only photometry is available (Simongini et al. 2024)
-- Analysis of a supernova for which photometry and spectroscopy are available (LST Collaboration 2024, in prep)
+- Analysis of a supernova for which only photometry is available (described in [Simongini et al. 2024](https://doi.org/10.1093/mnras/stae1911)). 
+- Analysis of a supernova for which photometry and spectroscopy are available (described in LST Collaboration 2024, in prep)
 
 In the first case, you will only need to prepare your `name.dat` file containing the light curves of the case-of-study supernova following the same scheme as the training set data (four columns, time, magnitude, error and filter). 
 
