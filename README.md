@@ -110,7 +110,15 @@ As always, things can go pretty wrong and you will need to re-do your analysis. 
 * dynamic definition of R$^2$ limit
 * faster estimation of mass of nichel 
 
+## References (main)
 
+[1] [Aryan et al. 2021, MNRAS, 505, 2530](10.1093/mnras/stab1379). 
+[2] [Branch & WHeeler 2017, Astronomy and Astrophysics Library](10.1007/978-3-662-55054-0). 
+[3] [Filippenko 1997, ARA&A, 35, 309](10.1086/309659). 
+[4] [Meza et al. 2019, A&A, 629, A57](10.1051/0004-6361/201834972). 
+[5] [Nakamura et al. 2016, MNRAS, 461, 3296](10.1093/mnras/stw1453). 
+[6] [Vincenzi et al. 2019, MNRAS, 489, 5802](10.1093/mnras/stz2448). 
+[7] [Yaron & Gal-Yam, Publ. Astron. Soc. Pac., 124, 668](10.1086/666656).
 
 ## Aknowledgments
 
