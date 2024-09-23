@@ -101,14 +101,15 @@ As always, things can go pretty wrong and you will need to re-do your analysis. 
    - data points are too scattered in time.
    - data points are too scattered in magnitude following a non-physical behaviour. 
 
-## 5. Future updates for version 1.1
+## 5. Future updates for version
 * safer selection of real spectral points from the reference supernova in the building_templates class
 * update gaussian process fitting of light curves
 * definition of a n_cores variable
 * accurate scaling of real spectral points for templates reconstruction
 * implementation of a user-independent pipeline of analysis
 * dynamic definition of R$^2$ limit
-* faster estimation of mass of nichel 
+* faster estimation of mass of nichel
+* Estimate of Mass Loss Rate interval using the formula proposed in [Smith et al. 2008](https://iopscience.iop.org/article/10.1086/591021/meta)
 
 ## References (main)
 
