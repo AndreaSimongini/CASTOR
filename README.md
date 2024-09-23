@@ -101,7 +101,7 @@ As always, things can go pretty wrong and you will need to re-do your analysis. 
    - data points are too scattered in time.
    - data points are too scattered in magnitude following a non-physical behaviour. 
 
-## 5. Future updates for version
+## 5. Work in progress 
 * safer selection of real spectral points from the reference supernova in the building_templates class
 * update gaussian process fitting of light curves
 * definition of a n_cores variable
@@ -110,6 +110,14 @@ As always, things can go pretty wrong and you will need to re-do your analysis. 
 * dynamic definition of R$^2$ limit
 * faster estimation of mass of nichel
 * Estimate of Mass Loss Rate interval using the formula proposed in [Smith et al. 2008](https://iopscience.iop.org/article/10.1086/591021/meta)
+
+
+## Future application 
+* LST Collaboration, in prep: the analysis of SN2024bch.
+* Simongini, Ragosta et al., in prep: the analysis of Vera C. Rubin simulations
+* Analysis of new CCSNe events 
+
+
 
 ## References (main)
 
